@@ -1,5 +1,7 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
 const myInput = document.querySelector('#datetime-picker');
 const myBtn = document.querySelector('.js-btn');
@@ -19,44 +21,42 @@ const options = {
   defaultDate: new Date(),
   minuteIncrement: 1,
   onClose(selectedDates) {
-    const currentDate = new Date();
+    const currentTime = new Date();
     userSelectedDate = selectedDates[0];
-
-    if (userSelectedDate <= currentDate) {
+    if (userSelectedDate <= currentTime) {
       myBtn.disabled = true;
-      window.alert('Please choose a date in the future');
-      elements.days.textContent = '00';
-      elements.hours.textContent = '00';
-      elements.minutes.textContent = '00';
-      elements.seconds.textContent = '00';
+
+      iziToast.error({
+        title: 'Error',
+        message: 'Please choose a date in the future',
+      });
     } else {
       myBtn.disabled = false;
     }
   },
 };
 
-const fp = flatpickr(myInput, options); // flatpickr
+const fp = flatpickr(myInput, options);
 
 myBtn.addEventListener('click', handlerReverseCount);
 
 function handlerReverseCount() {
-  myInput.disabled = true;
   myBtn.disabled = true;
+  myInput.disabled = true;
 
-  setInterval(() => {
-    const currentDate = new Date();
-    const restTime = userSelectedDate - currentDate;
-    if (restTime <= 0) {
+  const countTime = setInterval(() => {
+    const currentTime = new Date();
+    const differenceTime = userSelectedDate - currentTime;
+
+    if (differenceTime <= 0) {
       myInput.disabled = false;
+      clearInterval(countTime);
       return;
     }
-    // localStorage.setItem('test', JSON.stringify(convertMs(restTime)));
 
-    const time = convertMs(restTime);
+    const time = convertMs(differenceTime);
     updateTimerDisplay(time);
   }, 1000);
-
-  // return convertMs(restTime);
 }
 
 function updateTimerDisplay({ days, hours, minutes, seconds }) {
