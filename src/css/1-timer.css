@@ -97,35 +97,6 @@ h1 {
   border-color: #4e75ff !important;
 }
 
-.iziToast-wrapper-bottomRight {
-  top: 0;
-}
-
-.iziToast:after {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
-  background-color: #ef4040;
-  color: #fff;
-}
-
-.iziToast > .iziToast-body .iziToast-message {
-  color: #fff !important;
-}
-
-.iziToast > .iziToast-body .iziToast-title {
-  color: #fff !important;
-}
-
-.iziToast > .iziToast-body .iziToast-icon.ico-error {
-  background-image: url(../img/bi_x-octagon.png) !important;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: 80%;
-}
-
 .iziToast > .iziToast-close {
   background-image: url(../img/bi_x-lg.png) !important;
   background-size: 16px 16px !important;

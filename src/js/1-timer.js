@@ -27,15 +27,22 @@ const options = {
       myBtn.disabled = true;
 
       iziToast.error({
+        position: 'topRight',
         title: 'Error',
         message: 'Please choose a date in the future',
+        titleColor: 'white',
+        titleSize: '16px',
+        messageColor: 'white',
+        backgroundColor: '#ef4040',
+        iconUrl: '../img/bi_x-octagon.png',
+        // closeIconClass: 'custom-close-icon',
+        // closeIcon: 'img/bi_x-lg.png',
       });
     } else {
       myBtn.disabled = false;
     }
   },
 };
-
 const fp = flatpickr(myInput, options);
 
 myBtn.addEventListener('click', handlerReverseCount);
