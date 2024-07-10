@@ -34,7 +34,7 @@ const options = {
         titleSize: '16px',
         messageColor: 'white',
         backgroundColor: '#ef4040',
-        iconUrl: '../../img/bi_x-octagon.png',
+        iconUrl: '/img/bi_x-octagon.png',
         // closeIconClass: 'custom-close-icon',
         // closeIcon: 'img/bi_x-lg.png',
       });

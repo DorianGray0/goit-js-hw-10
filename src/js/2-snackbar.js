@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', event => {
     titleSize: '16px',
     messageColor: 'white',
     backgroundColor: '#09f',
-    iconUrl: '../../img/bi_bell.png',
+    iconUrl: '/img/bi_bell.png',
   });
 });
 
@@ -34,7 +34,7 @@ function handlerCreatePromise(evt) {
         titleSize: '16px',
         messageColor: 'white',
         backgroundColor: '#59a10d',
-        iconUrl: '../../img/bi_check2-circle.png',
+        iconUrl: '/img/bi_check2-circle.png',
       });
     })
     .catch(delayNumber => {
@@ -46,7 +46,7 @@ function handlerCreatePromise(evt) {
         titleSize: '16px',
         messageColor: 'white',
         backgroundColor: '#ef4040',
-        iconUrl: '../../img/bi_x-octagon.png',
+        iconUrl: '/img/bi_x-octagon.png',
       });
     })
     .finally(() => {});
