@@ -1,6 +1,10 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
+import iconBell from '../img/bi_bell.png';
+import successIcon from '/img/bi_check2-circle.png';
+import iconOctagon from '../img/bi_x-octagon.png';
+
 const form = document.querySelector('.form');
 
 form.addEventListener('submit', handlerCreatePromise);
@@ -14,7 +18,7 @@ document.addEventListener('DOMContentLoaded', event => {
     titleSize: '16px',
     messageColor: 'white',
     backgroundColor: '#09f',
-    iconUrl: '/img/bi_bell.png',
+    iconUrl: iconBell,
   });
 });
 
@@ -34,7 +38,7 @@ function handlerCreatePromise(evt) {
         titleSize: '16px',
         messageColor: 'white',
         backgroundColor: '#59a10d',
-        iconUrl: '/img/bi_check2-circle.png',
+        iconUrl: successIcon,
       });
     })
     .catch(delayNumber => {
@@ -46,7 +50,7 @@ function handlerCreatePromise(evt) {
         titleSize: '16px',
         messageColor: 'white',
         backgroundColor: '#ef4040',
-        iconUrl: '/img/bi_x-octagon.png',
+        iconUrl: iconOctagon,
       });
     })
     .finally(() => {});

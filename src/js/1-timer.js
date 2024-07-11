@@ -54,11 +54,11 @@ function handlerReverseCount() {
   const countTime = setInterval(() => {
     const currentTime = new Date();
     const differenceTime = userSelectedDate - currentTime;
+    console.log(differenceTime);
 
-    if (differenceTime <= 0) {
+    if (differenceTime < 1000) {
       myInput.disabled = false;
       clearInterval(countTime);
-      return;
     }
 
     const time = convertMs(differenceTime);
