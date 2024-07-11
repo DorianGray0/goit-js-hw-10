@@ -2,6 +2,7 @@ import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
+import iconError from '/img/bi_x-octagon.png';
 
 const myInput = document.querySelector('#datetime-picker');
 const myBtn = document.querySelector('.js-btn');
@@ -34,7 +35,7 @@ const options = {
         titleSize: '16px',
         messageColor: 'white',
         backgroundColor: '#ef4040',
-        iconUrl: '/img/bi_x-octagon.png',
+        iconUrl: iconError,
         // closeIconClass: 'custom-close-icon',
         // closeIcon: 'img/bi_x-lg.png',
       });
