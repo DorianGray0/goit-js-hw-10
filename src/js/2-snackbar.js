@@ -1,9 +1,9 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
-import iconBell from '../img/bi_bell.png';
+import iconBell from '/img/bi_bell.png';
 import successIcon from '/img/bi_check2-circle.png';
-import iconOctagon from '../img/bi_x-octagon.png';
+import iconOctagon from '/img/bi_x-octagon.png';
 
 const form = document.querySelector('.form');
 
