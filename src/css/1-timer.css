@@ -93,11 +93,11 @@ h1 {
   text-transform: uppercase;
 }
 
-.flatpickr-day.today {
-  border-color: #4e75ff !important;
+.dayContainer > .flatpickr-day.today {
+  border-color: #4e75ff;
 }
 
-.iziToast > .iziToast-close {
-  background-image: url(../img/bi_x-lg.png) !important;
-  background-size: 16px 16px !important;
+.iziToast-capsule > .iziToast > .iziToast-close {
+  background-image: url(../img/bi_x-lg.png);
+  background-size: 16px 16px;
 }
